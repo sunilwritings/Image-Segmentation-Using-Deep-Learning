@@ -1,5 +1,5 @@
 tensorflow
 numpy
-opencv-python-headless
+git+https://github.com/qubvel/segmentation_models
 matplotlib
 keras
