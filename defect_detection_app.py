@@ -67,12 +67,8 @@ def rle_to_mask(rle):
       mask[int(start):int(start+lengths[index])]=1
    return mask.reshape((height,width),order='F')[::,::2]
 
-"""
-Implementing custom data generator
-#https://towardsdatascience.com/implementing-custom-data-generators-in-keras-de56f013581c
-#https://www.kaggle.com/cdeotte/keras-unet-with-eda
-"""
-class train_DataGenerator(tensorflow.keras.utils.Sequence):
+
+class train_DataGenerator(tf.keras.utils.Sequence):
     def __init__(self,dataframe,batch_size=1,shuffle=True,preprocess=None,info={}):
      self.batch_size = batch_size
      self.df = dataframe
@@ -114,7 +110,7 @@ class train_DataGenerator(tensorflow.keras.utils.Sequence):
 
 # Implementing custom data generator
 #https://towardsdatascience.com/implementing-custom-data-generators-in-keras-de56f013581c
-class test_DataGenerator(tensorflow.keras.utils.Sequence):
+class test_DataGenerator(tf.keras.utils.Sequence):
   def __init__(self,dataframe,batch_size=1,shuffle=False,preprocess=None,info={}):
    self.batch_size = batch_size
    self.df = dataframe
