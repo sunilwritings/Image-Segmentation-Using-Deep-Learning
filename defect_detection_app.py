@@ -9,6 +9,7 @@ Original file is located at
 
 import warnings
 warnings.filterwarnings("ignore")
+
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
@@ -28,7 +29,8 @@ from PIL import Image
 from tensorflow.keras import backend as K
 from tensorflow.keras.models import Model,load_model
 from tensorflow.keras.regularizers import l2
-SM_FRAMEWORK=tf.keras
+import os
+os.environ["SM_FRAMEWORK"] = "tf.keras"
 import segmentation_models as sm
 sm.set_framework('tf.keras')
 from segmentation_models import get_preprocessing
