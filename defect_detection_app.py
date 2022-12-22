@@ -202,5 +202,4 @@ if predict_button:
         st.dataframe(df)
         prediction(df)  
 
-if __name__ == "__main__":
-    main()
+
