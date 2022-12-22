@@ -168,7 +168,7 @@ def prediction(df):
     progress_bar = st.progress(0)
     start = time.time()
     model = get_model()
-    train_preds=model.predict_generator(test_DataGenerator(df.values,preprocess=get_preprocessing('mobilenet')),verbose=1)
+    train_preds=model.predict_generator(test_DataGenerator(df,preprocess=get_preprocessing('mobilenet')),verbose=1)
    
 
    
