@@ -28,11 +28,10 @@ from PIL import Image
 from tensorflow.keras import backend as K
 from tensorflow.keras.models import Model,load_model
 from tensorflow.keras.regularizers import l2
+%env SM_FRAMEWORK=tf.keras
 import segmentation_models as sm
 from segmentation_models import get_preprocessing
 import imgaug.augmenters as iaa
-sm.set_framework('tf.keras')
-sm.framework()
 import segmentation_models as sm
 from segmentation_models import get_preprocessing
 import streamlit as st
