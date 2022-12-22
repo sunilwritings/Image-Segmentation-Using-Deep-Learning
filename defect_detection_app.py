@@ -163,12 +163,12 @@ def get_model():
     UNet=tf.keras.models.load_model('model_unet.h5',custom_objects={'binary_crossentropy_plus_dice_loss':sm.losses.bce_dice_loss,'iou_score':iou_score})
     return UNet
 
-def prediction(data):
+def prediction(df):
     state = st.text('\n Please wait while the model predict the defect in image.....')
     progress_bar = st.progress(0)
     start = time.time()
     model = get_model()
-    train_preds=model.predict_generator(test_DataGenerator(data[1:2],preprocess=get_preprocessing('mobilenet')),verbose=1)
+    train_preds=model.predict_generator(test_DataGenerator(df.values,preprocess=get_preprocessing('mobilenet')),verbose=1)
    
 
    
@@ -177,8 +177,8 @@ def prediction(data):
     fig,ax=plt.subplots(1,3,figsize=(15,2))
     fig.suptitle('Defect_image')
    
-    image_id=data[1:2].values[0][0]
-    rle=data[1:2].values[0][1]
+    image_id=df.values[0][0]
+    rle=df.values[0][1]
     im=Image.open(path+str(image_id))
     ax[0].imshow(im)
     ax[0].set_title(image_id)
