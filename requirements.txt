@@ -1,6 +1,6 @@
 tensorflow
 numpy
-git+https://github.com/qubvel/segmentation_models
+-U segmentation-models
 matplotlib
 
 
