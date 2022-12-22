@@ -30,6 +30,7 @@ from tensorflow.keras.models import Model,load_model
 from tensorflow.keras.regularizers import l2
 SM_FRAMEWORK=tf.keras
 import segmentation_models as sm
+sm.set_framework('tf.keras')
 from segmentation_models import get_preprocessing
 import imgaug.augmenters as iaa
 import segmentation_models as sm
