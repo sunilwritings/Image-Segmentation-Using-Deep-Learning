@@ -1,6 +1,6 @@
 tensorflow
 numpy
-!pip install -U segmentation-models
+segmentation-models
 matplotlib
 
 
