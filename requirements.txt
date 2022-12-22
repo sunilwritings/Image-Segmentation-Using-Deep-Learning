@@ -3,7 +3,7 @@ numpy
 segmentation-models
 matplotlib
 
-
+SM_FRAMEWORK=tf.keras
 keras_applications>=1.0.7,<=1.0.8
 image-classifiers==1.0.0
 efficientnet==1.0.0
