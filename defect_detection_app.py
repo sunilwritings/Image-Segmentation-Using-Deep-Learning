@@ -34,9 +34,6 @@ os.environ["SM_FRAMEWORK"] = "tf.keras"
 import segmentation_models as sm
 sm.set_framework('tf.keras')
 from segmentation_models import get_preprocessing
-import imgaug.augmenters as iaa
-import segmentation_models as sm
-from segmentation_models import get_preprocessing
 import streamlit as st
 
 
@@ -75,7 +72,7 @@ Implementing custom data generator
 #https://towardsdatascience.com/implementing-custom-data-generators-in-keras-de56f013581c
 #https://www.kaggle.com/cdeotte/keras-unet-with-eda
 """
-class train_DataGenerator(keras.utils.Sequence):
+class train_DataGenerator(tensorflow.keras.utils.Sequence):
     def __init__(self,dataframe,batch_size=1,shuffle=True,preprocess=None,info={}):
      self.batch_size = batch_size
      self.df = dataframe
@@ -117,7 +114,7 @@ class train_DataGenerator(keras.utils.Sequence):
 
 # Implementing custom data generator
 #https://towardsdatascience.com/implementing-custom-data-generators-in-keras-de56f013581c
-class test_DataGenerator(keras.utils.Sequence):
+class test_DataGenerator(tensorflow.keras.utils.Sequence):
   def __init__(self,dataframe,batch_size=1,shuffle=False,preprocess=None,info={}):
    self.batch_size = batch_size
    self.df = dataframe
