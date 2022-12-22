@@ -44,10 +44,10 @@ st.image(image, caption='Steel Surface')
 st.text('This app will segment the defect existed in steel surfaces')
 st.text('You can upload the data below :')
 
-col1= st.beta_columns(1)
+col1= st.columns(1)
 data = col1.file_uploader('Upload the csv file below',type=['csv'])
 
-col1 = st.beta_columns(1)
+col1 = st.columns(1)
 predict_button = col1.button('Predict on uploaded files')
 
 
