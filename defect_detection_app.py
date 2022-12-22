@@ -35,6 +35,7 @@ os.environ["SM_FRAMEWORK"] = "tf.keras"
 import segmentation_models as sm
 sm.set_framework('tf.keras')
 from segmentation_models import get_preprocessing
+from segmentation_models.metrics import iou_score
 import streamlit as st
 
 
