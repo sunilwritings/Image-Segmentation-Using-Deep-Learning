@@ -193,6 +193,7 @@ def prediction(df):
 
 
     progress_bar.progress(100)
+    end=time.time()
     st.write('Time taken for prediction :', str(round(end-start,3))+' seconds')
     progress_bar.empty()
     state.text('\n Completed!')
