@@ -45,10 +45,10 @@ st.text('This app will segment the defect existed in steel surfaces')
 st.text('You can upload the data below :')
 
 col1= st.columns(1)
-data = col1.file_uploader('Upload the csv file below',type=['csv'])
+data = st.file_uploader('Upload the csv file below',type=['csv'])
 
 col1 = st.columns(1)
-predict_button = col1.button('Predict on uploaded files')
+predict_button = st.button('Predict on uploaded files')
 
 
 
