@@ -1,6 +1,6 @@
 tensorflow
 numpy
--U segmentation-models
+U segmentation-models
 matplotlib
 
 
