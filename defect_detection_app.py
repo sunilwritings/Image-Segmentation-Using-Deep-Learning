@@ -78,6 +78,7 @@ class train_DataGenerator(tf.keras.utils.Sequence):
     def __len__(self):
      return len(self.indices) // (self.batch_size)
     def __getitem__(self, index):
+     k=1
      index = self.index[index * self.batch_size:(index + 1) * self.batch_size]
      batch = [self.indices[k] for k in index]
      X, y = self.__get_data(batch)
@@ -119,6 +120,7 @@ class test_DataGenerator(tf.keras.utils.Sequence):
   def __len__(self):
    return len(self.indices) // (self.batch_size)
   def __getitem__(self, index):
+   k=1
    index = self.index[index * self.batch_size:(index + 1) * self.batch_size]
    batch = [self.indices[k] for k in index]
    X, y = self.__get_data(batch)
